@@ -85,8 +85,6 @@ public class SmallestAndLargestSubstring {
                 index2 = i;
             }
         }
-
         System.out.println("Smallest "+arr[index2]);
-
     }
 }
