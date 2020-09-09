@@ -57,34 +57,16 @@ public class SmallestAndLargestSubstring {
             }
         }
         System.out.println(Arrays.toString(arr));
-
-        int key = 0;
-        int index = 0;
-        int key2 = 0;
-        int index2 = 0;
-        int flag = 0;
-        for (int i = 0; i <arr.length ; i++) {
-            String curr = arr[i];
-            char firstChar = curr.charAt(0);
-            if (key == (int)firstChar){
-                System.out.println("same");
-            }
-            if (key<(int)firstChar){
-                key = (int)firstChar;
-                index = i;
+        for (int i=0; i<arr.length; i++){
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[i].compareTo(arr[j])>0){
+                    String temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
             }
         }
-        System.out.println("Largest "+arr[index]);
-        key2 = (int)arr[index].charAt(0);
+        System.out.println("smallest = "+arr[0]+" and Largest = "+arr[arr.length-1]);
 
-        for (int i = 0; i <arr.length ; i++) {
-            String curr = arr[i];
-            char firstChar = curr.charAt(0);
-            if ((int)firstChar < key2){
-                key2 = (int)firstChar;
-                index2 = i;
-            }
-        }
-        System.out.println("Smallest "+arr[index2]);
     }
 }
