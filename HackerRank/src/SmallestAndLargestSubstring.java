@@ -39,8 +39,6 @@ public class SmallestAndLargestSubstring {
      * the lexicographically smallest and largest substrings of length K.
      */
 
-    // TODO Need rework, as we are checking only the first letter
-
     public static void main(String[] args) {
         String smallest= "";
         String largest = "";
@@ -67,6 +65,5 @@ public class SmallestAndLargestSubstring {
             }
         }
         System.out.println("smallest = "+arr[0]+" and Largest = "+arr[arr.length-1]);
-
     }
 }
