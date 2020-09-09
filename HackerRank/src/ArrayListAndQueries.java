@@ -37,7 +37,7 @@ import java.util.Scanner;
  * ERROR!
  * ERROR!
  */
-public class ArrayListAndQueries {
+public class ArrayListAndQueries  {
     public static void main(String[] args)   {
         Scanner sc = new Scanner(System.in);
         int numberOfLines = sc.nextInt();
